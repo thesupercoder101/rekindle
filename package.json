@@ -1,0 +1,18 @@
+{
+  "name": "rekindle-build",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node build-automation.js"
+  },
+  "dependencies": {
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "@babel/plugin-transform-async-to-generator": "^7.24.0",
+    "cheerio": "^1.0.0",
+    "fs-extra": "^11.2.0",
+    "glob": "^10.3.10",
+    "postcss": "^8.4.35",
+    "postcss-preset-env": "^9.5.0"
+  }
+}
