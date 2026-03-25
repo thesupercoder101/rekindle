@@ -1,18 +1,26 @@
 {
-  "name": "rekindle-build",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "build": "node build-automation.js"
-  },
-  "dependencies": {
-    "@babel/core": "^7.24.0",
-    "@babel/preset-env": "^7.24.0",
-    "@babel/plugin-transform-async-to-generator": "^7.24.0",
-    "cheerio": "^1.0.0",
-    "fs-extra": "^11.2.0",
-    "glob": "^10.3.10",
-    "postcss": "^8.4.35",
-    "postcss-preset-env": "^9.5.0"
-  }
+    "name": "rekindle-build",
+    "version": "1.0.0",
+    "scripts": {
+        "build": "node build-automation.js",
+        "deploy:beta": "npx wrangler pages deploy . --project-name=rekindle --branch=beta",
+        "deploy:rules:firestore": "firebase deploy --only firestore:rules",
+        "deploy:rules:rtdb": "firebase deploy --only database:rules",
+        "deploy:rules:storage": "firebase deploy --only storage"
+    },
+    "dependencies": {
+        "@babel/core": "^7.29.0",
+        "@babel/plugin-transform-async-to-generator": "^7.28.6",
+        "@babel/preset-env": "^7.29.2",
+        "cheerio": "^1.2.0",
+        "firebase-admin": "^13.7.0",
+        "fs-extra": "^11.3.4",
+        "glob": "^10.5.0",
+        "postcss": "^8.5.8",
+        "postcss-preset-env": "^10.6.1",
+        "stripe": "^20.3.0"
+    },
+    "overrides": {
+        "fast-xml-parser": "^5.3.4"
+    }
 }
